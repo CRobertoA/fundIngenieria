@@ -3,6 +3,12 @@ Jdk:
   - oraclejdk8
   - oraclejdk9
   - openjdk8
+
+services:
+  - mysql
+  
+before_install:
+  - mysql -e 'CREATE DATABASE controlescolar;'
   
 script:
   - jdk_switcher use oraclejdk8
